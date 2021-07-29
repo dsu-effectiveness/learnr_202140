@@ -20,7 +20,7 @@ The first thing you should do is add your name to this README.md file. The way t
 
 ---
 
-<h5>Once you have cloned the Repo</h5>
+<h4>Once you have cloned the Repo</h4>
 
 Once you have cloned the repo, you should look through the files using RStudio. The first files we will work with are in the folder 01_getting_started. The materials in the getting started folder will be covered in our meetings from July 29 to August 12. The topics we will cover are
 
