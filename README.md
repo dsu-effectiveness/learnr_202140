@@ -17,6 +17,7 @@ The first thing you should do is add your name to this README.md file. The way t
 <h4>Colloquium Participants</h4>
 
 - Matt
+- Brenten
 
 ---
 
