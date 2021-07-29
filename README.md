@@ -22,6 +22,7 @@ The first thing you should do is add your name to this README.md file. The way t
 - Craig
 - Justin
 - Andrea
+
 ---
 
 <h4>Once you have cloned the Repo</h4>
