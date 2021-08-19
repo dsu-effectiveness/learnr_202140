@@ -19,7 +19,7 @@ library(scales)
 ## Getting our data
 
 ```{r}
-graduates <- read_delim('fake_graduates.csv',  # the name of the file. Don't forget the path if you need it
+graduates <- read_delim('01_getting_started/fake_graduates.csv',  # the name of the file. Don't forget the path if you need it
                         delim = ';',  # specify the delimiter. 
                         col_types = cols(               # specify the data types of the columns
                           name = col_character(),
