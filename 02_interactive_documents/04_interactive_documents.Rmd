@@ -15,7 +15,7 @@ This example is taken from book [R Markdown: The Definitive guide](https://bookd
 
 ## Simple example
 ```{r, echo=FALSE}
-numericInput("rows", "How many cars?", 5)
+numericInput("rows", "How many car?", 5)
 ```
 
 Note that the selector does not have to be in the same chunk as the render function. 
