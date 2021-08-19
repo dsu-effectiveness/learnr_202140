@@ -1,0 +1,54 @@
+---
+title: "Interactive Documents"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(shiny)
+```
+
+# {.tabset}
+
+This example is taken from book [R Markdown: The Definitive guide](https://bookdown.org/yihui/rmarkdown/) in [Chapter 19 Section 1: Getting Started](https://bookdown.org/yihui/rmarkdown/shiny-start.html)
+
+## Simple example
+```{r, echo=FALSE}
+numericInput("rows", "How many cars?", 5)
+```
+
+Note that the selector does not have to be in the same chunk as the render function. 
+```{r, echo = FALSE}
+renderTable({
+  req(input$rows) # prevents the renderTable command from running if input$rows is null
+  
+  head(cars, input$rows)
+})
+```
+
+Here is more text about a different topic.
+
+## Full Shiny App
+
+```{r}
+shinyApp(
+
+  ui = fluidPage(
+    selectInput("region", "Region:",
+                choices = colnames(WorldPhones)),
+    plotOutput("phonePlot")
+  ),
+
+  server = function(input, output) {
+    output$phonePlot = renderPlot({
+      barplot(WorldPhones[,input$region]*1000,
+              ylab = "Number of Telephones", xlab = "Year")
+    })
+  },
+
+  options = list(height = 500)
+)
+```
+
+
